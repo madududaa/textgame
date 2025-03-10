@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura na floresta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+
+    <script>
+
+        function escolha1() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você vai direto para o meio  do mato e lá surge uma serpente falante, sussurrando ela lhe diz:</p>'
+            html += '<p> 🐍: Venha experimentar minhas deliciosas frutas do dragão🥝</p>'
+            html += '<img src="imagens/cobra.png">'
+            html += '<p> O que deseja fazer? </p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha3()"> 🥝RECUSAR🥝 </button>'
+            html += '<button onclick="escolha4()"> 🥝ACEITAR🥝 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha2() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p>Você espera a ajuda vir, mas ela não chega.</p>'
+            html += '<img src="imagens/sozinha.png">'
+            html += '<p>Deseja sair para explorar e encontrar seu amigo?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha5()"> 🌊SAIR🌊</button>'
+            html += '<button onclick="escolha6()"> 🌊FICAR🌊 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha3() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você ignorou a dona serpente e seguiu seu caminho. </p>'
+            html += '<p> mais a frente achou um filhote de porquinho 🐷 mas era um porquinho diferente, </p>'
+            html += '<p> ele tinha asas 🪽 mas não conseguia voar, pois tinha prendido a pata em um tipo de armadilha feita de cipó. </p>'
+            html += '<img src="imagens/preso.png">'
+            html += '<p> Você deseja ir ajudar o porquinho ou ignorar?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha7()"> 🐷AJUDAR🐷 </button>'
+            html += '<button onclick="escolha8()"> 🐷IGNORAR🐷 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha4() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você morreu de intoxicação...☠️ </p>'
+            html += '<img src="imagens/envenenado.png">'
+            html += '<p> ☠️☠️☠️FIM☠️☠️☠️ </p>'
+            html += '<button onclick="location.reload()">☠️ GAME OVER☠️ </button>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+        function escolha5() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Em busca do seu colega, você entra em meio a mata 🌳, passa correndo por você um coelhinho 🐰 </p>'
+            html += '<p> Ele para de correr e olha para você com olhos curiosos. </p>'
+            html += '<p> Tem uma linda arvore 🌲 com um desenho de coração vermelho ❣️ separando dois caminhos. </p>'
+            html += '<img src="imagens/curioso.png">'
+            html += '<p> Deseja conversar com o coelhinho🐰?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha9()"> 🐇NÃO🐇 </button>'
+            html += '<button onclick="escolha10()"> 🐇SIM🐇 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+        function escolha6() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você morreu de fome, sede, insolação etc...☠️ </p>'
+            html += '<img src="imagens/morta.png">'
+            html += '<p> ☠️☠️☠️FIM☠️☠️☠️ </p>'
+            html += '<button onclick="location.reload()">☠️ GAME OVER☠️ </button>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+        function escolha7() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você foi ajudar o porquinho 🐖 e conseguiu soltar ele, então ele lhe disse: </p>'
+            html += '<p> 🐷: Muito obrigado meu senhor! Sei que já fez muito por mim, </p>'
+            html += '<p> mas poderia me levar até a minha escola? Minha patinha está doendo muito e minhas asinhas muito cansadas. </p>'
+            html += '<img src="imagens/salvo.png">'
+            html += '<p> Deseja levar o porquinho?🐷</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha11()"> 🐷NÃO🐷 </button>'
+            html += '<button onclick="escolha12()"> 🐷SIM🐷 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+        function escolha8() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você escolheu não ajudar o porquinho 🐖 e desviou dele </p>'
+            html += '<p> porém acabou caindo em uma armadilha também e ficou preso, assim morrendo...☠️ </p>'
+            html += '<img src="imagens/armadilha.png">'
+            html += '<p> ☠️☠️☠️FIM☠️☠️☠️ </p>'
+            html += '<button onclick="location.reload()">☠️ GAME OVER☠️ </button>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha9() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você ignorou o coelhinho e foi pelo caminho contrário dele </p>'
+            html += '<p> porém andou, andou e parecia não sair do lugar. Então viu o pequeno sinal na arvore 🌲 </p>'
+            html += '<p> de mais cedo e o pequeno coelhinho com um semblante triste sentadinho na arvore 🌲 </p>'
+            html += '<img src="imagens/triste.png">'
+            html += '<p> Deseja conversar com o coelhinho🐰?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha13()"> 🐰NÃO🐰 </button>'
+            html += '<button onclick="escolha14()"> 🐰SIM🐰 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha10() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você escolheu falar com o coelhinho: </p>'
+            html += '<p> 👩🏾: Olá coelhinho, você viu um homem forte bem grandão de cabelos castanhos? </p>'
+            html += '<p> 🐰:  Não vi senhorita, mas talvez ele possa estar perto de onde eu vou, pode me fazer companhia? </p>'
+            html += '<img src="imagens/coelho.png">'
+            html += '<p> Deseja levar o coelhinho🐰?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha13()"> 🐰NÃO🐰 </button>'
+            html += '<button onclick="escolha15()"> 🐰SIM🐰 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+        function escolha11() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você escolheu não levar o porquinho 🐖 e desviou dele </p>'
+            html += '<p> porém acabou caindo em uma armadilha também e ficou preso, assim morrendo...☠️ </p>'
+            html += '<img src="imagens/armadilha.png">'
+            html += '<p> ☠️☠️☠️FIM☠️☠️☠️ </p>'
+            html += '<button onclick="location.reload()">☠️ GAME OVER☠️ </button>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha12() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você escolheu levar ele para a escola 🏫 </p>'
+            html += '<p> então o levou e ficou com ele em seu colo para que não machucasse mais </p>'
+            html += '<p> e quando olhou mais adiante viu sua amiga que não via à dias </p>'
+            html += '<p> lhe deu um sorriso expressando seu alívio.</p>'
+            html += '<img src="imagens/olhando.png">'
+            html += '<p> Deseja ir até ela👩🏾?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha16()"> 👩🏾SIM👨🏿 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha13() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você anda distraída e cai num buraco ☠️assim morrendo☠️ </p>'
+            html += '<img src="imagens/buraco.png">'
+            html += '<p> ☠️☠️☠️FIM☠️☠️☠️ </p>'
+            html += '<button onclick="location.reload()">☠️ GAME OVER☠️ </button>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha14() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você descobre que o coelhinho está morrendo de medo de ir sozinho para a escola 🏫 </p>'
+            html += '<p> pois tem medo dos coleguinhas não gostarem dele. </p>'
+            html += '<p> Após ele lhe contar todos os seus medos ele pede que você acompanhe ele até a escola 🏫 </p>'
+            html += '<img src="imagens/coelho.png">'
+            html += '<p> Deseja levar o coelhinho🐰?</p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha13()"> 🐰NÃO🐰 </button><br>'
+            html += '<button onclick="escolha15()"> 🐰SIM🐰 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha15() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Você levou ele para a escola e ficou perto dele para lhe fazer companhia </p>'
+            html += '<p> até que avistou de longe o homem que procurava. Ele lhe viu e sorriu. </p>'
+            html += '<p> Finalmente se reencontraram, o alívio era mútuo </p>'
+            html += '<img src="imagens/olhando.png">'
+            html += '<p> Deseja ir até ele👨🏿? </p>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha16()"> 👨🏿SIM👩🏾 </button>'
+            html += '</div>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+        function escolha16() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> Vocês se reencontraram, agora cabe a vocês decidirem se irão: </p>'
+            html += '<p> 🐖🐇ficar na ilha e criar uma bela história juntos👩🏾👨🏿 </p>'
+            html += '<p> ou </p>'
+            html += '<p> 🪵🌊irão bolar um jeito de sair?⛵️🛶 </p>'
+            html += '<img src="imagens/abraco.png"><br><br><br>'
+            html += '<div class="botaos">'
+            html += '<button onclick="escolha17()"> 🐖🐇FICAR👩🏾👨🏿 </button>'
+            html += '<button onclick="escolha18()"> 🪵🌊SAIR⛵️🛶 </button>'
+            html += '</div>'
+            html += '</div>'
+
+
+
+            $("body").append(html);
+        }
+
+
+        function escolha17() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> 🐇👩🏾 FIM 👨🏿🐖 </p>'
+            html += '<img src="imagens/ficar.png">'
+            html += '<p> 🐖🐇🥥 Parte 2 criando uma história na ilha 💖👩🏾👨🏿 </p>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+        function escolha18() {
+            $(".container").remove();
+            var html = '<div class="container">'
+            html += '<p> 🌊👩🏾 FIM 👨🏿🌊 </p>'
+            html += '<img src="imagens/embora.png">'
+            html += '<p> 🪵🌊🥥 Parte 2 tentando escapar da ilha 🌍⛵️🛶 </p>'
+            html += '</div>'
+
+            $("body").append(html);
+        }
+
+
+
+
+    </script>
+
+
+    <style>
+        .botaos {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 1300px;
+            height: 1300px;
+            padding: 30px;
+            box-shadow: 0px -1px 20px 9px rgba(255, 25, 159, 0.514);
+            background-image: linear-gradient(40deg, rgba(128, 0, 255, 0.647), rgba(20, 0, 23, 0.613), rgba(237, 32, 189, 0.487), rgba(255, 138, 36, 0.522));
+        }
+
+        button {
+            width: 370px;
+            height: 70px;
+            border-radius: 50px;
+            background: linear-gradient(30deg, #e0d3ea, #7ce3f1, #e2b2ff);
+            color: rgb(62, 0, 120);
+            font-size: 40px;
+            margin-left: 40px;
+            border-color: rgb(132, 0, 255);
+            font-family: "Jersey 10";
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            border: 5px groove linear-gradient(65deg, #01f7ff, #8df3e2, #cb7afe);
+            border-radius: 80px;
+            width: 370px;
+            height: 70px;
+            background: linear-gradient(30deg, #1eddca, #e059d2, #a656d7);
+            transition: 1s;
+            font-family: "Jersey 10";
+            box-shadow:  #59d7e0 0px 7px 12px 7px, #019eff -2px -15px 18px 3px, rgb(115, 5, 217) 20px 0px 20px 4px;
+            transform: scale(1.1)
+        }
+
+        body {
+            font-family: "Jersey 10";
+            color: rgb(249, 247, 251);
+            font-size: 40px;
+            background-image: url(imagens/fundo.gif);
+            background-repeat: repeat-y;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        img {
+            width: 600px;
+            height: 600px;
+            border-radius: 20px;
+            border: 3px groove rgb(242, 208, 255);
+            box-shadow: rgb(127, 7, 191) -1px 6px 10px;
+        }
+
+        h1 {
+            font-size: 90px;
+            text-shadow: #e059d2 -1px -1px 14px, #01f7ff 10px 0 18px, rgb(62, 0, 120) 15px 0 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Aventura na floresta </h1>
+        <p>Vocês acordam na praia de uma ilha
+            deserta, vocês
+            precisam descobrir
+            como foram parar na ilha e
+            como sair da ilha,
+            assim decidiram
+            se separar para achar
+            a melhor forma de sobreviver</p>
+        <img src="imagens/inicio.png">
+        <br>
+
+        <p>Com qual bonequinho você gostaria de jogar ?</p>
+        <div class="botaos">
+            <button onclick="escolha1()">👨🏿</button>
+            <button onclick="escolha2()">👩🏾</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
